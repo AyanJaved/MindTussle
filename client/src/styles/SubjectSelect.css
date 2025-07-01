@@ -1,0 +1,86 @@
+.subject-container {
+  max-width: 400px;
+  margin: 100px auto 40px auto; /* leaves space for fixed header */
+  background: #2f3136;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  color: #dcddde;
+  text-align: center;
+}
+
+.subject-container h2,
+.subject-container h3 {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.subject-container select,
+.subject-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #40444b;
+  border: 1px solid #202225;
+  border-radius: 6px;
+  color: #dcddde;
+  font-size: 16px;
+}
+
+.subject-container select:focus,
+.subject-container input:focus {
+  outline: none;
+  border-color: #5865f2;
+}
+
+.subject-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.subject-container button:hover {
+  background: linear-gradient(135deg, #4752c4, #5b6ecd);
+  transform: translateY(-2px);
+}
+
+.subject-container button:active {
+  transform: translateY(0);
+}
+
+.subject-action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.subject-action-buttons button {
+  flex: 1;
+  padding: 10px;
+  background: #40444b;
+  color: #dcddde;
+  border: 1px solid #202225;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.subject-action-buttons button:hover {
+  background: #5865f2;
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .subject-container {
+    margin: 80px 20px 40px 20px;
+    padding: 20px;
+  }
+}
