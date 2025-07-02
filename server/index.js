@@ -9,22 +9,23 @@ const { Server } = require("socket.io");
 const authRoutes = require("./routes/auth");
 const roomRoutes = require("./routes/room");
 const questionRoutes = require("./routes/questions");
-
+// cors issue
+const corsOptions = {
+    origin: ["https://mindtussle.onrender.com"],
+    methods: ["GET", "POST"],
+    credentials: true,
+};
 // Config
 dotenv.config();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: {
-        origin: ["https://mindtussle.onrender.com"],
-        methods: ["GET", "POST"],
-        credentials: true
-    }
+    cors: corsOptions,
 });
 
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Routes
