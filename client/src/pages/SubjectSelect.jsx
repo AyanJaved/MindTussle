@@ -20,7 +20,8 @@ const SubjectSelect = () => {
         if (!roomPassword) return alert("Please set a room password.");
 
         const res = await axios.post(
-          "http://localhost:5000/api/room/create",
+          "https://mindtussle-server.onrender.com/api/room/create"
+,
           {
             subject,
             password: roomPassword,
