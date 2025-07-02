@@ -52,7 +52,7 @@ const SubjectSelect = () => {
         }
 
         const res = await axios.post(
-          "http://localhost:5000/api/room/join",
+          "https://mindtussle-server.onrender.com/api/room/join",
           {
             roomId,
             password: roomPassword,
