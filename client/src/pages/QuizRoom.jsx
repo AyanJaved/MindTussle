@@ -31,7 +31,7 @@ export default function QuizRoom() {
 
         // Get room data for quizTime & quizStartTime
         const roomRes = await axios.post(
-          "http://localhost:5000/api/room/join",
+          "https://mindtussle-server.onrender.com/api/room/join",
           { roomId, password: roomPassword },
           { headers: { Authorization: localStorage.getItem("token") } }
         );
@@ -55,7 +55,7 @@ export default function QuizRoom() {
         setTimeLeft(remaining > 0 ? remaining : 0);
 
         const questionsRes = await axios.get(
-          `http://localhost:5000/api/questions/${encodeURIComponent(roomSubject)}`,
+          `https://mindtussle-server.onrender.com/api/questions/${encodeURIComponent(roomSubject)}`,
           { headers: { Authorization: localStorage.getItem("token") } }
         );
 
