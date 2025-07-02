@@ -19,7 +19,7 @@ function Register() {
     setError("");
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://mindtussle-server.onrender.com/api/auth/register",
         form
       );
       // ✅ Automatically login after registration
